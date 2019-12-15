@@ -57,8 +57,6 @@ void insertion_sort(int *arr, int len)
             }
         }
         flag = 0 ;
-        printArr(arr,10);
-        printf("\n"); 
        
     }
 }
@@ -66,15 +64,13 @@ void printArr(int arr[], int x)
 {
     for (size_t i = 0; i < x; i++)
     {
-        if (i == 0)
-        {
-            printf("[");
-        }
-        printf("%d , ", arr[i]);
-        if (i == x - 1)
-        {
-            printf("]");
-        }
+       if(i == x-1)
+       {
+            printf("%d", arr[i]);
+            
+       }
+        else printf("%d,", arr[i]);
+        
     }
     printf("\n");
 }
