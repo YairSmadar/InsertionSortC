@@ -3,18 +3,22 @@
 
 
 void shift_element(int* arr, int i){
-        int index = i;
-        while(index > 0){
-            *(arr+index-1) = *(arr+index);
-            index--;
+    
+        while(i > 0){
+            *(arr+i) = *(arr+i-1);
+            i--;
+            if(i == 0){*(arr+i) = 999 ;}
         }
-        
+
+}    
 
 void printArr(int arr[], int x){
     for (size_t i = 0; i < x; i++)
     {
-        printf("%d\n",arr[i]);
+        if(i == 0) {printf("[");}
+        printf("%d , ",arr[i]);
+        if(i == x-1) {printf("]");}
     }
     
 }
-}
+
