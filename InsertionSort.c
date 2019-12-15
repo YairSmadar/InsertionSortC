@@ -14,7 +14,6 @@ void shift_element(int *arr, int i)
         }
     }
 }
-
 void insertion_sort(int *arr, int len)
 {
     int flag = 0 ; 
@@ -42,8 +41,14 @@ void insertion_sort(int *arr, int len)
         {
             if(index == arr )
             {
+                if(*arr>=key){
                 shift_element(index, counter);
                 *(index) = key;
+                }
+                else{
+                    shift_element(index+1, counter);
+                *(index+1) = key;
+                }
             }
             else
             {
@@ -57,11 +62,6 @@ void insertion_sort(int *arr, int len)
        
     }
 }
-
-
-
-
-
 void printArr(int arr[], int x)
 {
     for (size_t i = 0; i < x; i++)
