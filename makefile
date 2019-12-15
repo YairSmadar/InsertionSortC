@@ -14,6 +14,7 @@ InsertionSort.o:InsertionSort.c InsertionSort.h
 main.o:main.c InsertionSort.h
 	$(CC) $(FLAGS) -c main.c
 
+
 run:main.o liber.a
 	$(CC) $(FLAGS) -o run main.o liber.a 
 
