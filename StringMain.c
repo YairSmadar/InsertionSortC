@@ -44,8 +44,10 @@ int main()
                     flag = checkString((buffer + i), word_to_find);
                     if(flag==1){
                         printf("%s", buffer);
+                        break;
                     } 
                 }
+
             }
         }
     }
