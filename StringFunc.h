@@ -7,6 +7,7 @@
 // int similar(char *s , char *t,int n);
 // void print_lines(char *str);
 // void print_similar_word(char *str);
+int checkString(char *str , char arr[]);
 
 
 #endif

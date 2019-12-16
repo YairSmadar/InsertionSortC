@@ -1,4 +1,7 @@
 cat a
 
-2
-3
+this is a file text
+looking for the word cat
+the program should print also cats
+and crat and lcat but it shouldn`t
+print the word caats
