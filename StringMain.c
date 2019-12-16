@@ -12,6 +12,7 @@ int main()
 {
     char buffer[MAX];
     fgets(buffer, MAX, stdin);
+    //printf("%s" , buffer);
     char word_to_find[MAX];
     char command;
     size_t buffe_len = strlen(buffer);
@@ -27,37 +28,42 @@ int main()
             command = buffer[count + 1];
         }
     }
-    printf("%s\n", word_to_find);
-    printf("%c\n", command);
+    // printf("%s\n", word_to_find);
+    // printf("%c\n", command);
     int flag = 0;
     //size_t word_to_find_length = strlen(word_to_find);
     if (command == a)
     {
-        for (size_t k = 1; k < LINES; k++)
+        for (size_t k = 1; k < 10; k++)
         {
             fgets(buffer, MAX, stdin);
+            //printf("%s\n", buffer);
             buffe_len = strlen(buffer);
-            for (size_t i = 0; i < buffe_len; i++)
+            for (size_t i = 0; i < buffe_len ; i++)
             {
-                if(buffer[i] == word_to_find[0])
+                // printf("%s\n", buffer);
+                if (buffer[i] == word_to_find[0])
                 {
-                    flag = checkString((buffer+i),word_to_find);
-                    if(flag) break;
+                    flag = checkString((buffer + i), word_to_find);
+                    if(flag==1){
+                        printf("%s", buffer);
+                    } 
                 }
             }
-            if(flag) printf("%s\n" , buffer);
-            
-            flag=0;
+            flag = 0;
         }
     }
-    // char buf [50] = "and crat and lcat but it shouldn`t";
+    // char buf [50] = "the program should print also cats";
     // int temp = 0;
     // char *cat = "cat";
-    // int len = strlen(cat);
-    // if(buf[14] == cat[0])
+    // for (size_t i = 0; i < 50; i++)
+    // {
+    //     if(buf[i] == cat[0])
     //     {
-    //          temp = checkString((buf+14),cat);
+    //       temp = checkString((buf+i),cat);
     //     }
+    // }
+    
 
     return 0;
 }
