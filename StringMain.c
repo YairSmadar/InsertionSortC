@@ -29,11 +29,11 @@ int main()
         }
     }
    
-    int flag = 0;
+     int flag = 0;
     
     if (command == a)
     {
-        for (size_t k = 1; k < 10; k++)
+        for (size_t k = 1; k < LINES; k++)
         {
             fgets(buffer, MAX, stdin);
             buffe_len = strlen(buffer);
@@ -52,5 +52,56 @@ int main()
         }
     }
 
+   if(command == b)
+    {
+        int counter = 0 ;
+        char *c = " ";
+        for (size_t k = 1; k < LINES; k++)
+        {
+            fgets(buffer, MAX, stdin);
+            buffe_len = strlen(buffer);
+            for (size_t i = 0; i < buffe_len ; i++)
+            {
+                counter++;
+                if ((buffer[i-1] == c[0]) || i == 0)
+                {
+                    
+                    flag = checkStringWord((buffer + i), word_to_find);
+                    if(flag==1)
+                    {
+                        printTheWord(buffer+i);
+                    } 
+                }
+
+            }
+        }
+    }
+    
     return 0;
 }
+
+    //==========================================================
+//      int counter = 0 ;
+//         int StartIndex = 0 ; 
+//         int EndIndex = 0 ;
+//         char *c = " ";
+//         char *s = "cat";
+//          char buffer[LINES] = "looking for word cat";
+       
+           
+//             for (size_t i = 0; i < LINES ; i++)
+//             {
+//                 counter++;
+//                 if (buffer[i-1] == c[0])
+//                 {
+                    
+//                     flag = checkStringWord((buffer + i),s);
+//                     if(flag==1){
+//                         printTheWord(buffer+i);
+//                     } 
+//                 }
+
+//             }
+        
+// return 0 ; 
+// }

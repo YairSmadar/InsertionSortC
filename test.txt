@@ -1,7 +1,7 @@
-cat a
+cat b
 
-this is a file text
-looking for word cat cat
+cat this is a file text
+looking for word cat 
 the pofram should print also cat
 and crat and lcat but it shouldn`t
 print the word caats
