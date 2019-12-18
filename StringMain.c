@@ -12,7 +12,6 @@ int main()
 {
     char buffer[MAX];
     fgets(buffer, MAX, stdin);
-    //printf("%s" , buffer);
     char word_to_find[MAX];
     char command;
     size_t buffe_len = strlen(buffer);
@@ -80,28 +79,4 @@ int main()
     return 0;
 }
 
-    //==========================================================
-//      int counter = 0 ;
-//         int StartIndex = 0 ; 
-//         int EndIndex = 0 ;
-//         char *c = " ";
-//         char *s = "cat";
-//          char buffer[LINES] = "looking for word cat";
-       
-           
-//             for (size_t i = 0; i < LINES ; i++)
-//             {
-//                 counter++;
-//                 if (buffer[i-1] == c[0])
-//                 {
-                    
-//                     flag = checkStringWord((buffer + i),s);
-//                     if(flag==1){
-//                         printTheWord(buffer+i);
-//                     } 
-//                 }
-
-//             }
-        
-// return 0 ; 
-// }
+ 

@@ -12,10 +12,6 @@ int main()
         if(scanf("%d" , &x) == 1){
             *(arr+i)  = x ;
         } 
-        else{
-            printf("You put a not good number try again\n");
-            i = i -1 ; 
-        }
     }
     insertion_sort(arr,size);
     printArr(arr,size);

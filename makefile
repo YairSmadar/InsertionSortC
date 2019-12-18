@@ -1,7 +1,7 @@
 CC = gcc
 FLAGS = -Wall -g
 
-all:runstring libers
+all:runstring libers run liber
 
 
 libers:libers.a
